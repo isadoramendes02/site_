@@ -1,0 +1,480 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+
+h1 {
+    font-family: "Great Vibes", cursive;
+   
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+
+:root {
+  --cor-fundo: linear-gradient(180deg, #f7ccff, #d5a8ff, #c2e9fb);    /*fundo suave */
+  --cor-principal: #d47fff;      /* roxo mágico */
+  --cor-secundaria: #ffb6f9;     /* rosa fada */
+  --cor-destaque: #7fffd4;       /* verde água */
+  --cor-texto: #4a006e;          /* roxo escuro, para contraste */
+  --cor-brilho: linear-gradient(135deg, #7b61ff 0%, #d68cff 40%, #8fd6ff 100%);
+}        /* amarelo clarinho, brilho */
+
+
+.background-purple{
+    background:var(--cor-fundo);
+}
+/* classes reutilizavéis */
+.container{
+    max-width: 1440px;
+    padding: 0 5%;
+    margin: 0 auto;
+}
+
+section{
+    padding: 2.7rem 0;
+
+}
+header {
+  background: linear-gradient(90deg, #ff8af0, #d88bff, #8cc6ff);
+  padding: 20px 0;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+}
+
+.btn-gradient{
+    padding: 10px 25px;
+    color: white;
+    border: none;
+    cursor: pointer;
+    background-image: linear-gradient(45deg, var(--cor-principal), var(--cor-secundaria), var(--cor-destaque));
+    border-radius: 20px;
+
+}
+/* Classes do site */
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0 ;
+}
+.logo a{
+    font-size: 30px;
+    font-weight: bold;
+    color:white;
+}
+.ul{
+    display: flex;
+    align-items: center;
+}
+.ul li{
+    margin: 0 35px;
+    font-size: 15px;
+}
+.ul li a{
+    color: white
+}
+/*main */
+main .container{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 30px;
+
+}
+.main-text{
+   width: 50%; 
+   color:white;
+}
+.main-text-2{
+   width: 40%; 
+   color: rgb(209, 46, 146); 
+  background: linear-gradient(120deg,
+    rgba(255, 192, 203, 0.9) 0%,     /* rosa fada - toque Bloom/Flora */
+    rgba(255, 222, 173, 0.9) 20%,    /* dourado suave - Stella */
+    rgba(187, 255, 221, 0.9) 40%,    /* verde-água claro - Flora/Aisha */
+    rgba(200, 220, 255, 0.9) 60%,    /* azul lilás - Tecna */
+    rgba(235, 200, 255, 0.9) 80%,    /* lilás rosado - Musa */
+    rgba(255, 240, 255, 0.9) 100%);  /* brilho final, branco mágico */
+   border-radius: 15px;
+   padding: 40px;
+ 
+    
+}
+
+
+.main-text h1{
+  font-size: 4.5rem;  
+}
+
+.main-text div{
+    display: flex;
+    align-items: center;
+    margin: 20px;
+}
+.main-img{
+    width: 50%;
+}
+.main-img img{
+    width: 100%;
+}
+.reserva-container {
+  display: flex;                /* coloca o botão e a imagem lado a lado */
+  align-items: center;          /* centraliza verticalmente */
+  gap: 20px;                    /* espaço entre eles */
+  margin-top: 20px;             /* espaço acima */
+}
+
+.logo-winx {
+  width: 150px;                 /* diminui a imagem */
+  height: auto;
+}
+.logo-winx {
+  width: 80px;   /* diminui o tamanho da imagem */
+  height: auto;   /* mantém as proporções corretas */
+}
+/*menu ícon*/
+.menu-ícon{
+    display: none;
+    position: relative;
+    z-index: 10;
+}
+/* resultados */
+.resultados{
+    background: linear-gradient(90deg, #f7b4f8, #cda5ff, #a7b8ff);
+}
+.resultados .container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.resultados .resultados-text{
+    color: white;
+    font-size: 1.6rem;
+    font-weight: 600;
+    width: 50%;
+}
+.resultados .resultados-img{
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+}
+.resultados .resultados-img p{
+    text-align: center;
+    margin: 0 30px;
+    font-size: 20px;
+}
+/* resultados */
+.resultados .resultados-text-2{
+    color: white;
+    font-size: 1.6rem;
+    font-weight: 600;
+    width: 50%;
+}
+/*section diferencias*/
+
+.diferencias .container{
+    display: flex;
+    justify-content: space-between;
+    margin: 30px auto;
+}
+
+.diferencias .card{
+    width: 30%;
+    cursor: pointer;
+    padding: 30px;
+    border-radius: 15px;
+    color: white;
+    background-image: linear-gradient(90deg, #fcb1ff, #d7a9ff, #a8d8ff);
+    
+}
+body.background-purple { 
+  background: var(--cor-fundo) !important;}
+    
+.diferencias .card img{
+    width: 60px;
+}
+.diferencias .card .titulo{
+    margin: 13px 0;
+    font-weight: 600;
+}
+
+.diferencias .card.bloom {
+ background: linear-gradient(135deg, #38C6D9, #7FE8F0, #FF8C42);
+}
+
+.diferencias .card.stella {
+  background: linear-gradient(135deg, #FFE259, #FFA751, #FF7E5F);
+}
+
+.diferencias .card.flora {
+   background: linear-gradient(135deg, #B6D365 0%, #7EE8A3 50%, #D4A5A5 100%);
+}
+
+.diferencias .card.musa {
+  background: linear-gradient(135deg, #2196F3 , #3F51B5, #E040FB);
+}
+
+.diferencias .card.tecna {
+   background: linear-gradient(135deg, #8B59E5, #9370DB, #32CD32);
+}
+
+.diferencias .card.aisha{
+  background: linear-gradient(135deg, #01579B 0%, #00B8D4 50%, #80D8FF 100%);
+}
+
+
+/*section diferencias*/
+
+/*section fada bloom*/
+.fada .container{
+  margin-bottom: -100px;
+  padding-bottom: 60px;
+  display: flex;
+  align-items: center;
+}
+.fada .fada-img{
+  width: 20%;
+}
+.fada .fada-img img{
+  width:100%;
+  border-radius: 10px;
+}
+.fada .fada-text{
+  padding: 30px;
+  width: 50%;
+  border-radius: 15px;
+  background: linear-gradient(135deg, #38C6D9, #7FE8F0, #FF8C42);
+  color: white;
+  min-height: 180px;
+}
+/*stella*/
+.fada .fada-stella-text{
+  padding: 30px;
+  width: 50%;
+  border-radius: 15px;
+  background: linear-gradient(135deg, #FFE259, #FFA751, #FF7E5F);
+  color: white;
+  min-height: 180px;
+}
+/* end stella*/
+/*flora*/
+.fada .fada-flora-text{
+  padding: 30px;
+  width: 50%;
+  border-radius: 15px;
+  background: linear-gradient(135deg, #B6D365 0%, #7EE8A3 50%, #D4A5A5 100%);
+  color: white;
+  min-height: 180px;
+}
+/* end flora*/
+/*musa*/
+.fada .fada-musa-text{
+  padding: 30px;
+  width: 50%;
+  border-radius: 15px;
+  background: linear-gradient(135deg, #2196F3 , #3F51B5, #E040FB);
+  color: white;
+  min-height: 180px;
+}
+/* end musa*/
+/*tecna*/
+.fada .fada-tecna-text{
+  padding: 30px;
+  width: 50%;
+  border-radius: 15px;
+  background: linear-gradient(135deg, #8B59E5, #9370DB, #32CD32);
+  color: white;
+  min-height: 180px;
+}
+/* end tecna*/
+/*aisha*/
+.fada .fada-aisha-text{
+  padding: 30px;
+  width: 50%;
+  border-radius: 15px;
+  background: linear-gradient(135deg, #01579B 0%, #00B8D4 50%, #80D8FF 100%);
+  color: white;
+  min-height: 180px;
+}
+/* end aisha*/
+
+/*responsivo*/
+@media(max-width: 960px){
+    .menu-ícon{
+        display: block;
+    }
+.ul {
+    position: fixed;
+    background: var(--cor-brilho);
+    top: 0;
+    width: 100%;
+    left: 100%;
+    transition: 0.3s;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .ul li{
+    font-size: 20px;
+    margin: 20px 0;
+
+  }
+  .ul.ativo{
+    left: 0;
+  }
+  main .container{
+    flex-direction: column;
+  }
+  main.container .main-img,
+  main .container .main-text{
+    width: 100%;
+    text-align: center;
+  }
+  main .container .main-text h1{
+    font-size: 4rem;
+  }
+  main .container .main-text div{
+    justify-content: center;
+  }
+  .resultados .container{
+    flex-direction: column;
+  }
+  .resultados .resultados-text
+  .resultados .resultados-img{
+    width: 100%;
+    text-align: center;
+  }
+  .resultados-img{
+    margin-top: 30px;
+  }
+  .diferencias .container{
+    flex-direction: column;
+  }
+  .diferencias .card{
+    width: 100%; 
+  }
+}
+@media (max-width:440px){
+   .resultados .resultados-img{
+    flex-direction: column;   
+   } 
+   main .container .main-text h1{
+    font-size: 3rem;
+   }
+}
+ .imagem-pequena {
+      width: 130px;     /* Largura fixa */
+      height: auto;     /* Mantém a proporção da imagem */
+    }
+
+    header.header-winx {
+  background: linear-gradient(to right, #f48fb1, #81d4fa);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  padding: 15px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.container-winx {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-winx a {
+  font-size: 2rem;
+  font-weight: 700;
+  color: white;
+  text-decoration: none;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.ul-winx {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.ul-winx a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.ul-winx a:hover {
+  color: #ffecb3;
+}
+
+.btn-gradient-winx {
+  background: linear-gradient(to right, #ff80ab, #b388ff);
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-gradient-winx:hover {
+  transform: scale(1.05);
+}
+
+/* --- GALERIA --- */
+main.main-winx {
+  padding: 80px 0;
+}
+
+.galeria-container-winx {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 40px;
+  padding: 20px;
+}
+
+.galeria-container-winx img {
+  width: 250px; /* tamanho reduzido */
+  border-radius: 20px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.galeria-container-winx img:hover {
+  transform: scale(1.08);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* --- TEXTO MOTIVADOR --- */
+.mensagem-winx {
+  margin-top: 50px;
+  padding: 0 30px;
+  color: #5a0080;
+  font-size: 1.3rem;
+  font-weight: 600;
+  line-height: 1.8;
+  text-shadow: 0 1px 3px rgba(255, 255, 255, 0.6);
+  background: linear-gradient(to right, #ffe3f3, #e1caff);
+  border-radius: 25px;
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 25px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* --- RODAPÉ --- */
+footer.footer-winx {
+  text-align: center;
+  padding: 20px;
+  background: #d0b3ff;
+  color: #4b007d;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
