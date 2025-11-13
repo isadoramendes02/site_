@@ -478,3 +478,106 @@ footer.footer-winx {
   font-weight: 500;
   letter-spacing: 0.5px;
 }
+
+
+/* Lista principal */
+.ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+.ul li {
+  position: relative;
+}
+
+.ul li a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  padding: 10px 15px;
+  display: block;
+}
+
+/* Submenu (oculto por padrão) */
+.submenu {
+  display: none;
+  position: absolute;
+  top: 40px;
+  left: 0;
+  background: linear-gradient(180deg, #f9baff, #c88bff);
+  border-radius: 8px;
+  list-style: none;
+  padding: 5px 0;
+  z-index: 100;
+}
+
+/* Itens do submenu */
+.submenu li a {
+  color: white;
+  padding: 10px 20px;
+  display: block;
+  white-space: nowrap;
+}
+
+.submenu li a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Mostrar submenu no hover (desktop) */
+.dropdown:hover .submenu {
+  display: block;
+}
+
+/* Ícone do menu (para mobile) */
+.menu-ícon img {
+  width: 30px;
+  cursor: pointer;
+  display: none;
+}
+
+/* Menu ativo no mobile */
+.ul.ativo {
+  display: block;
+  flex-direction: column;
+  background: linear-gradient(180deg, #d36bff, #8fb8ff);
+  width: 100%;
+  position: absolute;
+  top: 60px;
+  left: 0;
+  text-align: center;
+  padding: 10px 0;
+}
+
+/* Submenu aberto no mobile */
+.dropdown.open .submenu {
+  display: block;
+}
+
+/* Responsivo */
+@media (max-width: 900px) {
+  .ul {
+    display: none;
+  }
+
+  .menu-ícon img {
+    display: block;
+  }
+}
+
+/* Conteúdo principal */
+.intro {
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.intro h1 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+
+.intro p {
+  font-size: 1.2em;
+}
