@@ -299,6 +299,16 @@ body.background-purple {
   min-height: 180px;
 }
 /* end aisha*/
+/*As trix */
+.fada .fada-trix-text{
+  padding: 30px;
+  width: 50%;
+  border-radius: 15px;
+  background: linear-gradient( #93c8f3 0%,#4a004a 50%,#303030 100% );
+  color: white;
+  min-height: 180px;
+}
+/*end As trix */
 
 /*responsivo*/
 @media(max-width: 960px){
