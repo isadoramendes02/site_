@@ -233,6 +233,8 @@ body.background-purple {
   padding-bottom: 60px;
   display: flex;
   align-items: center;
+
+*/*As trix*/
 }
 .fada .fada-img{
   width: 20%;
@@ -241,6 +243,35 @@ body.background-purple {
   width:100%;
   border-radius: 10px;
 }
+
+
+.fada .fada-img-trix {
+  width: 20%;
+}
+.fada .fada-img-trix img{
+  width:75%;
+  border-radius: 30px;
+}
+.fada-img-trix img {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 40px;
+  padding: 20px;
+}
+
+.fada-img-trix img {
+  width: 250px; /* tamanho reduzido */
+  border-radius: 20px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+.fada-img-trix img:hover {
+  transform: scale(1.08);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
 .fada .fada-text{
   padding: 30px;
   width: 50%;
@@ -304,7 +335,11 @@ body.background-purple {
   padding: 30px;
   width: 50%;
   border-radius: 15px;
-  background: linear-gradient( #93c8f3 0%,#4a004a 50%,#303030 100% );
+  background: linear-gradient(135deg,
+    #7a2a6a,   /* Stormy */
+    #1c8a9c,   /* Icy */
+    #4e224c    /* Darcy */
+);
   color: white;
   min-height: 180px;
 }
