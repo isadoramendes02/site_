@@ -233,9 +233,9 @@ body.background-purple {
   padding-bottom: 60px;
   display: flex;
   align-items: center;
-
-*/*As trix*/
 }
+*/*As trix*/
+
 .fada .fada-img{
   width: 20%;
 }
@@ -343,13 +343,51 @@ body.background-purple {
   color: white;
   min-height: 180px;
 }
+
+.fada .fada-text-icy{
+  padding: 30px;
+  width: 50%;
+  border-radius: 15px;
+   background: linear-gradient(135deg,
+    #0A3F52 0%,
+    #1EB5D1 50%,
+    #E4F7FF 100%);
+
+  color: white;
+  min-height: 180px;
+}
+
+.fada .fada-text-darcy{
+  padding: 30px;
+  width: 50%;
+  border-radius: 15px;
+    background: linear-gradient(135deg,
+    #2F1A4A 0%,
+    #8B66C7 50%,
+    #7A1024 100%);
+
+
+  color: white;
+  min-height: 180px;}
+
+  .fada .fada-text-stormy{
+  padding: 30px;
+  width: 50%;
+  border-radius: 15px;
+    background: linear-gradient(135deg,
+    #2F1E49 0%,
+    #5A3B7A 50%,
+    #A3923C 100%);
+
+  color: white;
+  min-height: 180px;}
 /*end As trix */
 
 /*responsivo*/
 @media(max-width: 960px){
     .menu-ícon{
         display: block;
-    }
+    }}
 .ul {
     position: fixed;
     background: var(--cor-brilho);
@@ -399,7 +437,6 @@ body.background-purple {
   .diferencias .card{
     width: 100%; 
   }
-}
 @media (max-width:440px){
    .resultados .resultados-img{
     flex-direction: column;   
