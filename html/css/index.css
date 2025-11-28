@@ -76,6 +76,8 @@ nav{
     color: white
 }
 /*main */
+
+
 main .container{
     display:flex;
     align-items: center;
@@ -83,6 +85,7 @@ main .container{
     margin-top: 30px;
 
 }
+
 .main-text{
    width: 50%; 
    color:white;
@@ -160,17 +163,18 @@ main .container{
     align-items: center;
     justify-content: center; 
 }
-.resultados .resultados-img p{
-    text-align: center;
-    margin: 0 30px;
-    font-size: 20px;
-}
+
 /* resultados */
 .resultados .resultados-text-2{
     color: white;
     font-size: 1.6rem;
     font-weight: 600;
     width: 50%;
+}
+
+.resultados .resultados-img p {
+    font-size: 30px;
+      letter-spacing: 8px;
 }
 /*section diferencias*/
 
@@ -234,7 +238,7 @@ body.background-purple {
   display: flex;
   align-items: center;
 }
-*/*As trix*/
+/*As trix*/
 
 .fada .fada-img{
   width: 20%;
@@ -252,7 +256,7 @@ body.background-purple {
   width:75%;
   border-radius: 30px;
 }
-.fada-img-trix img {
+.fada-img-trix  {
   display: flex;
   justify-content: center;
   align-items: flex-start;
@@ -384,59 +388,48 @@ body.background-purple {
 /*end As trix */
 
 /*responsivo*/
-@media(max-width: 960px){
+@media (max-width: 960px) {
+
     .menu-ícon{
         display: block;
-    }}
-.ul {
-    position: fixed;
-    background: var(--cor-brilho);
-    top: 0;
-    width: 100%;
-    left: 100%;
-    transition: 0.3s;
-    flex-direction: column;
-    justify-content: center;
-  }
-  .ul li{
-    font-size: 20px;
-    margin: 20px 0;
+    }
 
-  }
-  .ul.ativo{
-    left: 0;
-  }
-  main .container{
-    flex-direction: column;
-  }
-  main.container .main-img,
-  main .container .main-text{
-    width: 100%;
-    text-align: center;
-  }
-  main .container .main-text h1{
-    font-size: 4rem;
-  }
-  main .container .main-text div{
-    justify-content: center;
-  }
-  .resultados .container{
-    flex-direction: column;
-  }
-  .resultados .resultados-text
-  .resultados .resultados-img{
-    width: 100%;
-    text-align: center;
-  }
-  .resultados-img{
-    margin-top: 30px;
-  }
-  .diferencias .container{
-    flex-direction: column;
-  }
-  .diferencias .card{
-    width: 100%; 
-  }
+    main .container{
+        flex-direction: column;
+    }
+
+    main .container .main-img,
+    main .container .main-text{
+        width: 100%;
+        text-align: center;
+    }
+
+    main .container .main-text h1{
+        font-size: 4rem;
+    }
+
+    main .container .main-text div{
+        justify-content: center;
+    }
+
+    .resultados .resultados-text,
+    .resultados .resultados-img{
+        width: 100%;
+        text-align: center;
+    }
+
+    .resultados-img{
+        margin-top: 30px;
+    }
+
+    .diferencias .container{
+        flex-direction: column;
+    }
+
+    .diferencias .card{
+        width: 100%; 
+    }
+}
 @media (max-width:440px){
    .resultados .resultados-img{
     flex-direction: column;   
@@ -639,15 +632,23 @@ footer.footer-winx {
 }
 
 /* Responsivo */
-@media (max-width: 900px) {
-  .ul {
-    display: none;
-  }
+@media(max-width: 960px){
+    .menu-ícon{
+        display: block;
+    }
 
-  .menu-ícon img {
-    display: block;
-  }
+    main .container{
+        flex-direction: column;
+    }
+
+    main .container .main-img,
+    main .container .main-text{
+        width: 100%;
+        text-align: center;
+    }
 }
+
+
 
 /* Conteúdo principal */
 .intro {
@@ -663,3 +664,5 @@ footer.footer-winx {
 .intro p {
   font-size: 1.2em;
 }
+
+
