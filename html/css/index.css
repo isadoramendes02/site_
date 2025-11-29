@@ -20,12 +20,17 @@ h1 {
   --cor-destaque: #7fffd4;       /* verde água */
   --cor-texto: #4a006e;          /* roxo escuro, para contraste */
   --cor-brilho: linear-gradient(135deg, #7b61ff 0%, #d68cff 40%, #8fd6ff 100%);
+  --cor-galeria:  linear-gradient(135deg, #d797ff, #ff8ed9, #8abaff);
 }        /* amarelo clarinho, brilho */
 
 
 .background-purple{
     background:var(--cor-fundo);
 }
+.background-galeria{
+  background:var(--cor-galeria) ;
+}
+
 /* classes reutilizavéis */
 .container{
     max-width: 1440px;
@@ -501,21 +506,20 @@ body.background-purple {
 }
 
 /* --- GALERIA --- */
-main.main-winx {
-  padding: 80px 0;
-}
+
 
 .galeria-container-winx {
   display: flex;
   justify-content: center;
   align-items: flex-start;
   flex-wrap: wrap;
-  gap: 40px;
-  padding: 20px;
-}
+  gap: 50px;      
+  padding: 30px;  
+} /*tamanho dos espaçamentos entre as caixas*/
 
 .galeria-container-winx img {
-  width: 250px; /* tamanho reduzido */
+  width: 230px; /* tamanho reduzido */
+   height: 230px;  
   border-radius: 20px;
   transition: transform 0.3s, box-shadow 0.3s;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
@@ -525,35 +529,6 @@ main.main-winx {
   transform: scale(1.08);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
 }
-
-/* --- TEXTO MOTIVADOR --- */
-.mensagem-winx {
-  margin-top: 50px;
-  padding: 0 30px;
-  color: #5a0080;
-  font-size: 1.3rem;
-  font-weight: 600;
-  line-height: 1.8;
-  text-shadow: 0 1px 3px rgba(255, 255, 255, 0.6);
-  background: linear-gradient(to right, #ffe3f3, #e1caff);
-  border-radius: 25px;
-  width: 70%;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 25px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-}
-
-/* --- RODAPÉ --- */
-footer.footer-winx {
-  text-align: center;
-  padding: 20px;
-  background: #d0b3ff;
-  color: #4b007d;
-  font-weight: 500;
-  letter-spacing: 0.5px;
-}
-
 
 /* Lista principal */
 .ul {
