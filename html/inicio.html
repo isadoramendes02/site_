@@ -26,10 +26,7 @@
             </ul>
           </li>
            <li class="dropdown">
-            <a href="poderes.html">Poderes ▾</a>
-            <ul class="submenu">
-              <li><a href="transformacao.html">Transformação</a></li>
-            </ul>
+            <a href="poderes.html">Poderes</a>
             </li>
          <li class="dropdown">
             <a href="historia.html">Historia ▾</a>
@@ -55,8 +52,13 @@
      <div class="main-text">
       <h1>Entre fadas<br>um mundo de magia</h1>
       <h3>✨🫧Descubra um mundo mágico onde a amizade é<br>o maior poder das fadas🫧💫.</h3>
-      <div class="reserva-container"> 
-        <button class="btn-gradient">Transformar</button>
+      
+     <div class="reserva-container"> 
+    <a href="personagens.html" class="reserva-container"> 
+    <button class="btn-gradient">Transformar</button>
+</a>
+        
+
         <img src="img/logo2.png" alt="logo das winx" class="logo-winx">
      </div>
   </div>
@@ -69,6 +71,14 @@
     <!-- fim main img -->
   </div>
   </main>
+
+  <!--musica-->
+  <audio id="minhaMusica" loop>
+    <source src="music/winx.mp3" type="audio/mpeg">
+    Seu navegador não suporta o elemento de áudio.
+</audio>
+
+<button id="btnMusica">▶️ Tocar Música</button>
   
   <!-- resultados -->
    <section class="resultados">
@@ -92,8 +102,24 @@
         </div>
       </div>
          <!-- fim container -->
-     </section>
-     <!-- fim resultados -->
-      <script src="main.js"></script>
+    <script>
+    // 1. Obtém os elementos pelo ID
+    const musica = document.getElementById('minhaMusica');
+    const btnMusica = document.getElementById('btnMusica');
+
+    // 2. Define a função de play/pause
+    function togglePlayPause() {
+        if (musica.paused) {
+            musica.play();
+            btnMusica.textContent = '⏸️ Pausar Música';
+        } else {
+            musica.pause();
+            btnMusica.textContent = '▶️ Tocar Música';
+        }
+    }
+
+    // 3. Adiciona o evento de clique ao botão
+    btnMusica.addEventListener('click', togglePlayPause);
+</script>
   </body>
   </html>

@@ -51,3 +51,4 @@ function mostrarPersonagem(id) {
   document.querySelectorAll(".personagem").forEach(div => div.classList.remove("ativo"));
   document.getElementById(id).classList.add("ativo");
 }
+

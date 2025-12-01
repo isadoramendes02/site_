@@ -12,6 +12,11 @@ h1 {
     list-style: none;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Playwrite+NO:wght@100..400&display=swap');
+
+ *{
+  font-family: "Dancing Script", cursive;}
+
 
 :root {
   --cor-fundo: linear-gradient(180deg, #f7ccff, #d5a8ff, #c2e9fb);    /*fundo suave */
@@ -81,36 +86,46 @@ nav{
     color: white
 }
 /*main */
-
-
 main .container{
     display:flex;
     align-items: center;
     justify-content: space-between;
     margin-top: 30px;
-
 }
 
 .main-text{
    width: 50%; 
    color:white;
 }
-.main-text-2{
-   width: 40%; 
-   color: rgb(209, 46, 146); 
-  background: linear-gradient(120deg,
-    rgba(255, 192, 203, 0.9) 0%,     /* rosa fada - toque Bloom/Flora */
-    rgba(255, 222, 173, 0.9) 20%,    /* dourado suave - Stella */
-    rgba(187, 255, 221, 0.9) 40%,    /* verde-água claro - Flora/Aisha */
-    rgba(200, 220, 255, 0.9) 60%,    /* azul lilás - Tecna */
-    rgba(235, 200, 255, 0.9) 80%,    /* lilás rosado - Musa */
-    rgba(255, 240, 255, 0.9) 100%);  /* brilho final, branco mágico */
-   border-radius: 15px;
-   padding: 40px;
- 
-    
+
+/*historia*/
+
+
+.pagina-winx {
+  min-height: 100vh;  /* ocupa 100% da altura da tela */
+  background-image: url("../img/alfeacc.jpg");  /* ajuste o caminho */
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  box-sizing: border-box;
+  
 }
 
+.text-container {
+  display: flex;
+  gap: 20px; /* espaço entre os blocos */
+}
+
+.main-text-2, 
+.main-text-3 {
+  width: 50%;
+  color: white;
+  padding: 20px; /* adiciona espaço interno */
+  box-sizing: border-box; /* importante para não quebrar a largura */
+  margin-top: 100px;  /* aumenta espaço em cima do bloco de texto */
+  margin-bottom: 100px; /* aumenta espaço embaixo */
+}
 
 .main-text h1{
   font-size: 4.5rem;  
@@ -159,7 +174,7 @@ main .container{
 }
 .resultados .resultados-text{
     color: white;
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     font-weight: 600;
     width: 50%;
 }
@@ -183,75 +198,110 @@ main .container{
 }
 /*section diferencias*/
 
-.diferencias .container{
+/* CONTAINER PRINCIPAL E LAYOUT FLEX */
+.diferencias .container {
     display: flex;
     justify-content: space-between;
     margin: 30px auto;
 }
 
-.diferencias .card{
+/* CARDS DE DIFERENÇAS (Estilo Base e Transição) */
+.diferencias .card {
     width: 30%;
     cursor: pointer;
     padding: 30px;
     border-radius: 15px;
     color: white;
-    background-image: linear-gradient(90deg, #fcb1ff, #d7a9ff, #a8d8ff);
+    background-image: linear-gradient(90deg, #fcb1ff, #d7a9ff, #a8d8ff);}
+
+/* EFEITO AO PASSAR O MOUSE (HOVER) */
+.diferencias .card:hover {
+    /* Aplica o Zoom (Aumenta em 5%) */
+    transform: scale(1.05);
     
+    /* Adiciona uma Sombra para sensação de "levantar" */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
 }
-body.background-purple { 
-  background: var(--cor-fundo) !important;}
-    
-.diferencias .card img{
-    width: 60px;
+
+/* ELEMENTOS INTERNOS DO CARD */
+.diferencias .card img {
+    width: 100px;
+    height: 80px;
 }
-.diferencias .card .titulo{
+
+.diferencias .card .titulo {
     margin: 13px 0;
     font-weight: 600;
 }
 
+/* CORES ESPECÍFICAS DOS CARDS (GRADIENTES) */
 .diferencias .card.bloom {
- background: linear-gradient(135deg, #38C6D9, #7FE8F0, #FF8C42);
+    background: linear-gradient(135deg, #38C6D9, #7FE8F0, #FF8C42);
 }
 
 .diferencias .card.stella {
-  background: linear-gradient(135deg, #FFE259, #FFA751, #FF7E5F);
+    background: linear-gradient(135deg, #FFE259, #FFA751, #FF7E5F);
 }
 
 .diferencias .card.flora {
-   background: linear-gradient(135deg, #B6D365 0%, #7EE8A3 50%, #D4A5A5 100%);
+    background: linear-gradient(135deg, #B6D365 0%, #7EE8A3 50%, #D4A5A5 100%);
 }
 
 .diferencias .card.musa {
-  background: linear-gradient(135deg, #2196F3 , #3F51B5, #E040FB);
+    background: linear-gradient(135deg, #2196F3 , #3F51B5, #E040FB);
 }
 
 .diferencias .card.tecna {
-   background: linear-gradient(135deg, #8B59E5, #9370DB, #32CD32);
+    background: linear-gradient(135deg, #8B59E5, #9370DB, #32CD32);
 }
 
 .diferencias .card.aisha{
-  background: linear-gradient(135deg, #01579B 0%, #00B8D4 50%, #80D8FF 100%);
+    background: linear-gradient(135deg, #01579B 0%, #00B8D4 50%, #80D8FF 100%);
 }
-
 
 /*section diferencias*/
 
 /*section fada bloom*/
+
+
 .fada .container{
-  margin-bottom: -100px;
+  margin-bottom: -90px;
   padding-bottom: 60px;
   display: flex;
   align-items: center;
+
 }
+
+
 /*As trix*/
 
 .fada .fada-img{
   width: 20%;
+  height: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 40px;
+  padding: 30px;
+}
+
+.fada .fada-img{
+  width: 20%;
+  height: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 40px;
+  padding: 30px;
 }
 .fada .fada-img img{
   width:100%;
   border-radius: 10px;
 }
+
+
 
 
 .fada .fada-img-trix {
@@ -280,6 +330,39 @@ body.background-purple {
   transform: scale(1.08);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
 }
+
+
+/*pet*/
+
+.fada .fada-img-pet {
+  width: 30%;
+}
+.fada .fada-img-pet img{
+  width:75%;
+  border-radius: 30px;
+  height: 200px;
+}
+.fada-img-pet {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 40px;
+  padding: 20px;
+}
+
+.fada-img-pet img {
+  width: 200px; /* tamanho reduzido */
+  border-radius: 20px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+.fada-img-pet img:hover {
+  transform: scale(1.08);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+/*end pet*/
+
 
 .fada .fada-text{
   padding: 30px;
@@ -342,7 +425,7 @@ body.background-purple {
 /*As trix */
 .fada .fada-trix-text{
   padding: 30px;
-  width: 50%;
+  width: 60%;
   border-radius: 15px;
   background: linear-gradient(135deg,
     #7a2a6a,   /* Stormy */
@@ -355,7 +438,7 @@ body.background-purple {
 
 .fada .fada-text-icy{
   padding: 30px;
-  width: 50%;
+  width: 60%;
   border-radius: 15px;
    background: linear-gradient(135deg,
     #0A3F52 0%,
@@ -368,7 +451,7 @@ body.background-purple {
 
 .fada .fada-text-darcy{
   padding: 30px;
-  width: 50%;
+  width: 60%;
   border-radius: 15px;
     background: linear-gradient(135deg,
     #2F1A4A 0%,
@@ -381,7 +464,7 @@ body.background-purple {
 
   .fada .fada-text-stormy{
   padding: 30px;
-  width: 50%;
+  width: 60%;
   border-radius: 15px;
     background: linear-gradient(135deg,
     #2F1E49 0%,
@@ -390,6 +473,79 @@ body.background-purple {
 
   color: white;
   min-height: 180px;}
+
+
+
+  /* ------------------------------------------- */
+/* TRANSFORMAÇÃO E SOMBREAMENTO PARA BLOCOS DE TEXTO */
+/* ------------------------------------------- */
+
+/* Adiciona transição e sombra de base para todos os blocos de texto das fadas */
+.fada .fada-text,
+.fada .fada-stella-text,
+.fada .fada-flora-text,
+.fada .fada-musa-text,
+.fada .fada-tecna-text,
+.fada .fada-aisha-text,
+.fada .fada-trix-text,
+.fada .fada-text-icy,
+.fada .fada-text-darcy,
+.fada .fada-text-stormy {
+    /* Adiciona a transição para suavizar o movimento de salto e sombra */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* Sombra base sutil para dar profundidade antes do hover */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); 
+}
+
+/* Efeito de Salto e Sombra Escura ao passar o mouse */
+.fada .fada-text:hover,
+.fada .fada-stella-text:hover,
+.fada .fada-flora-text:hover,
+.fada .fada-musa-text:hover,
+.fada .fada-tecna-text:hover,
+.fada .fada-aisha-text:hover,
+.fada .fada-trix-text:hover,
+.fada .fada-text-icy:hover,
+.fada .fada-text-darcy:hover,
+.fada .fada-text-stormy:hover {
+    /* Faz o bloco saltar ligeiramente para frente */
+    transform: scale(1.02); 
+    /* Sombra escura (preto com transparência) para o efeito 'degrade preto' em volta */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+}
+
+
+/* ------------------------------------------- */
+/* TRANSFORMAÇÃO E SOMBREAMENTO PARA IMAGENS INDIVIDUAIS */
+/* ------------------------------------------- */
+
+/* Estilo da Imagem Individual (Bloom, Stella, etc.) */
+.fada .fada-img img {
+    width: 100%;
+    border-radius: 10px;
+    
+    /* Adiciona a transição e a sombra base */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); 
+}
+
+/* Efeito de Salto e Sombra Escura ao passar o mouse */
+.fada .fada-img img:hover {
+    /* Faz a imagem saltar */
+    transform: scale(1.08); 
+    /* Sombra escura (preto com transparência) para o efeito 'degrade preto' */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5); 
+}
+
+/* ------------------------------------------- */
+/* IMAGENS DAS TRIX (Ajustes para unificar o hover) */
+/* ------------------------------------------- */
+
+/* Ajuste sutil: apenas para garantir que a sombra do hover das Trix use o mesmo estilo */
+.fada-img-trix img:hover {
+    transform: scale(1.08);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5); 
+}
 /*end As trix */
 
 /*responsivo*/
@@ -640,4 +796,68 @@ body.background-purple {
   font-size: 1.2em;
 }
 
+/* CONTAINER DOS VÍDEOS */
+.trailer-card {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: center;
+    padding: 20px;
+    margin-bottom: 50px;
+}
 
+/* CARD DO VÍDEO */
+.video-card {
+    background-image: linear-gradient(90deg, #fcb1ff, #d7a9ff, #a8d8ff);
+    border-radius: 15px;
+    padding: 15px;
+    width: 300px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+/* ESTILO DO VÍDEO */
+
+
+/* TÍTULO DO VÍDEO */
+.video-card-text {
+    margin-top: 10px;
+    font-size: 16px;
+    color: #fff;
+    font-weight: bold;
+}
+
+.video-card video {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.card-text-titulo {
+  color:white;
+  font-size: 2.3rem;
+  margin-top: 80px;
+  text-align: center;
+}
+.card-text-titulo-1 {
+  color: white;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+/*musica*/
+#btnMusica {
+    background-color: #f0f0f0;
+    color: #333;
+    border: 1px solid #ccc;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+#btnMusica:hover {
+    background-color: #ddd;
+}
