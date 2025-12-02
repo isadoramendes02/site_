@@ -33,9 +33,15 @@
                     </li>
                     <li><a href="galeria.html">Galeria</a></li>
                 </ul>
+                <div class="menu-icon">
+
+        <img src="img/menubranco.png" alt="ícone menu">    
+      </div>
+    
             </nav>
         </div>
     </header>
+    
 
 <!-- section fada-->
  <!-- bloom -->
@@ -141,7 +147,15 @@ Flitter é a palavra inglesa que significa “esvoaçante”, devido ao fato de 
   <!-- end aisha  -->
   </div>
 </section>
+
 <!-- end section fada-->
+ <!--musica-->
+  <audio id="minhaMusica" loop>
+    <source src="music/winx.mp3" type="audio/mpeg">
+    Seu navegador não suporta o elemento de áudio.
+</audio>
+
+<button id="btnMusica"> 🎶 </button>
  <!-- resultados -->
   <section class="resultados">
     <!-- container -->
@@ -163,9 +177,26 @@ Flitter é a palavra inglesa que significa “esvoaçante”, devido ao fato de 
         </p>
       </div>
     </div>
+    
     <!-- end container -->
-    </section>
-    <!-- end resultados -->
-     <script src="main.js"></script>
+  <script>
+    // 1. Obtém os elementos pelo ID
+    const musica = document.getElementById('minhaMusica');
+    const btnMusica = document.getElementById('btnMusica');
+
+    // 2. Define a função de play/pause
+    function togglePlayPause() {
+        if (musica.paused) {
+            musica.play();
+            btnMusica.textContent = ' 🎶 ';
+        } else {
+            musica.pause();
+            btnMusica.textContent = ' 🎶';
+        }
+    }
+
+    // 3. Adiciona o evento de clique ao botão
+    btnMusica.addEventListener('click', togglePlayPause);
+</script>
 </body>
 </html>

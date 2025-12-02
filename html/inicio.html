@@ -36,7 +36,9 @@
          </li>
           <li><a href="galeria.html">Galeria</a></li>
         </ul>
-      <div class="menu-ícon">
+        
+      <div class="menu-icon">
+
         <img src="img/menubranco.png" alt="ícone menu">    
       </div>
     </nav>
@@ -72,14 +74,7 @@
   </div>
   </main>
 
-  <!--musica-->
-  <audio id="minhaMusica" loop>
-    <source src="music/winx.mp3" type="audio/mpeg">
-    Seu navegador não suporta o elemento de áudio.
-</audio>
 
-<button id="btnMusica">▶️ Tocar Música</button>
-  
   <!-- resultados -->
    <section class="resultados">
     <!-- container -->
@@ -102,24 +97,33 @@
         </div>
       </div>
          <!-- fim container -->
-    <script>
-    // 1. Obtém os elementos pelo ID
-    const musica = document.getElementById('minhaMusica');
-    const btnMusica = document.getElementById('btnMusica');
+    
+<audio id="musica" src="music/winx.mp3" loop></audio>
 
-    // 2. Define a função de play/pause
-    function togglePlayPause() {
-        if (musica.paused) {
-            musica.play();
-            btnMusica.textContent = '⏸️ Pausar Música';
-        } else {
-            musica.pause();
-            btnMusica.textContent = '▶️ Tocar Música';
-        }
+<button id="btnMusica">🎶</button>
+
+<script>
+const musica = document.getElementById('musica');
+const btn = document.getElementById('btnMusica');
+
+btn.onclick = () => {
+    if (musica.paused) {
+        musica.play();
+        btn.textContent = "🔊";
+    } else {
+        musica.pause();
+        btn.textContent = "🎶";
     }
-
-    // 3. Adiciona o evento de clique ao botão
-    btnMusica.addEventListener('click', togglePlayPause);
+};
 </script>
+<script>
+const menuIcon = document.querySelector(".menu-icon");
+const menuUl = document.querySelector("nav .ul");
+
+menuIcon.addEventListener("click", () => {
+    menuUl.classList.toggle("active");
+});
+</script>
+
   </body>
   </html>

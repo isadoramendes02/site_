@@ -157,12 +157,62 @@ main .container{
   width: 80px;   /* diminui o tamanho da imagem */
   height: auto;   /* mantém as proporções corretas */
 }
-/*menu ícon*/
-.menu-ícon{
+/* ===== MENU MOBILE ===== */
+.menu-icon {
     display: none;
-    position: relative;
-    z-index: 10;
+    cursor: pointer;
 }
+
+.menu-icon img {
+    width: 35px;
+}
+
+/* Estilos apenas para celular */
+@media (max-width: 768px) {
+
+    /* Ajusta o nav no celular */
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 70px;
+    }
+    .ul {
+      background: linear-gradient(135deg, #7b61ff 0%, #d68cff 40%, #8fd6ff 100%)!important;
+}
+
+    /* Menu lateral oculto */
+ .ul {
+    display: none;
+    position: fixed;
+    top: 70px;
+    right: 0;
+    width: 220px;
+    background: linear-gradient(135deg, #ffb7ff, #d7a9ff, #a8d8ff);
+    padding: 20px 25px;   /* ↓↓↓ DIMINUÍMOS ISSO, estava enorme */
+    border-radius: 20px 0 0 20px; /* mais redondinho */
+    flex-direction: column;
+    gap: 18px;
+    z-index: 999;
+    box-shadow: -2px 4px 12px rgba(0,0,0,0.2);
+}
+    /* Quando clicar aparece */
+    .ul.active {
+        display: flex;
+    }
+
+    /* Mostrar ícone de menu no celular */
+    .menu-icon {
+        display: block;
+    }
+
+    /* Esconde a nav normal */
+    nav ul {
+        display: none;
+    }
+}
+
+
 /* resultados */
 .resultados{
     background: linear-gradient(90deg, #f7b4f8, #cda5ff, #a7b8ff);
@@ -763,20 +813,68 @@ main .container{
 }
 
 /* Responsivo */
-@media(max-width: 960px){
-    .menu-ícon{
-        display: block;
-    }
+/* ======================== */
+/*  RESPONSIVIDADE GERAL    */
+/* ======================== */
 
-    main .container{
+/* Celulares */
+@media (max-width: 768px) {
+
+    /* Ajuste de container */
+    .container {
+        width: 100%;
+        padding: 0 20px;
         flex-direction: column;
     }
 
-    main .container .main-img,
-    main .container .main-text{
+    /* Menu responsivo */
+    nav .ul {
+        display: none; /* escondido inicialmente */
+        flex-direction: column;
+        background: #fff;
+        width: 100%;
+        padding: 20px;
+    }
+
+    .menu-ícon {
+        display: block;
+        cursor: pointer;
+    }
+
+    nav .ul.active {
+        display: flex;
+    }
+
+    /* Textos */
+    h1 {
+        font-size: 30px;
+        text-align: center;
+    }
+
+    h3 {
+        font-size: 18px;
+        text-align: center;
+    }
+
+    /* Imagens */
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    /* Layout lado a lado vira empilhado */
+    .main-text, 
+    .main-img {
         width: 100%;
         text-align: center;
     }
+
+    /* Botões */
+    .btn-gradient {
+        width: 100%;
+        font-size: 20px;
+    }
+
 }
 
 
@@ -848,14 +946,19 @@ main .container{
 
 /*musica*/
 #btnMusica {
-    background-color: #f0f0f0;
+    position: fixed;              /* FICA PARADO NA TELA */
+    bottom: 80px;                 /* ALTURA (aumente para subir) */
+    left: 10px;                   /* DISTÂNCIA DA ESQUERDA (mude para o lado) */
+    
+    background: linear-gradient(90deg, #fcb1ff, #d7a9ff, #a8d8ff);
     color: #333;
     border: 1px solid #ccc;
-    padding: 10px 20px;
+    padding: 5px;
     cursor: pointer;
-    border-radius: 5px;
-    font-size: 16px;
-    transition: background-color 0.3s;
+    border-radius: 200px;
+    font-size: 30px;
+    z-index: 9999;                /* GARANTE QUE FICA POR CIMA */
+   
 }
 
 #btnMusica:hover {
