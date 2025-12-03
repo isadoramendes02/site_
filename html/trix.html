@@ -4,160 +4,180 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>As Trix</title>
+    <!-- Importação do css -->
     <link rel="stylesheet" href="css/index.css">
+    <!-- stylesheet é o arquivo que define o visual do site -->
+    <!-- Fim Importação do css -->
 </head>
-<body class="background-galeria"></body>
-<header>
-     <div class="container">
-      <nav>
-        <div class="logo">
-          <a href="inicio.html">Winx</a>
+
+<!-- Cor de fundo -->
+<body class="background-galeria">
+  <!-- Fim Cor de fundo -->
+
+  <!-- Cabeça nav -->
+    <header>
+        <div class="container"> 
+            <nav> <!-- Agrupa links -->
+                <div class="logo"> <!-- "class" Aplicar varios elementos de uma vez só.-->
+                    <a href="inicio.html">Winx</a>
+                </div>
+                <ul class="ul"> <!-- ul cria listas NÃO ordenadas-->
+                    <li><a href="inicio.html">Início</a></li> <!-- "a" define como link, "href" local -->
+                    
+                    <li class="dropdown"> <!-- Lista de opção -->
+                        <a href="personagens.html">Personagens ▾</a> <!-- li  cria ITENS de lista-->
+                        <ul class="submenu"> 
+                            <li><a href="trix.html">As trix</a></li>
+                            <li><a href="pets.html">Pets</a></li>
+                        </ul>
+                    </li>
+                    
+                    <li class="dropdown">
+                        <a href="poderes.html">Poderes </a>
+                    </li>
+                    
+                    <li class="dropdown">
+                        <a href="historia.html">Historia ▾</a>
+                        <ul class="submenu">
+                            <li><a href="filmes.html">Filmes</a></li>
+                        </ul>
+                    </li>
+                    
+                    <li><a href="galeria.html">Galeria</a></li>
+                </ul>
+                
+                <div class="menu-icon">
+                    <img src="img/menubranco.png" alt="ícone menu"> <!-- "img" imagem, "src" define onde encontrar."
+                    -->
+                </div>
+            </nav>
         </div>
-        <ul class="ul">
-          <li><a href="inicio.html">Início</a></li>
-          <!-- Submenu Personagens -->
-          <li class="dropdown">
-            <a href="personagens.html">Personagens ▾</a>
-            <ul class="submenu">
-              <li><a href="trix.html">As trix</a></li>
-              <li><a href="pets.html">Pets</a></li>
-            </ul>
-          </li>
-           <li class="dropdown">
-            <a href="poderes.html">Poderes </a>
-            </li>
-         <li class="dropdown">
-            <a href="historia.html">Historia ▾</a>
-            <ul class="submenu">
-              <li><a href="filmes.html">Filmes</a></li>
-            </ul>
-         </li>
-          <li><a href="galeria.html">Galeria</a></li>
-        </ul>
-        <div class="menu-icon">
+    </header>
+    <!-- Fim Cabeça nav -->
 
-        <img src="img/menubranco.png" alt="ícone menu">    
-      </div>
-    
-  </header> 
-  
-    
+    <!-- As Trix -->
+    <section class="fada"> <!-- Agrupar conteúdo que define um tema.-->
+        <div class="container">
+            <div class="fada-img-trix">
+                <img src="img/astrix.jpg" alt="As Trix">
+            </div>
+            <div class="fada-trix-text">
+                <h1> As Trix </h1>
+                <p> 
+                    Trix são conhecidas por sua determinação, ambição e magia negra poderosa, que muitas vezes se baseia em elementos da natureza e emoções negativas. Elas aparecem frequentemente como as vilãs centrais ou como aliadas de outros antagonistas mais poderosos.
+                </p>
+            </div>
+        </div>
+    </section>
+    <!-- Fim As Trix -->
 
- 
-<!-- section fada-->
- <!-- bloom -->
+    <!-- Icy -->
+    <section class="fada">
+        <div class="container">
+            <div class="fada-img-trix">
+                <img src="img/icy.jpg" alt=" Ice ">
+            </div>
+            <div class="fada-text-icy">
+                <h1> Icy </h1>
+                <p> 
+                    Líder das Trix e bruxa do gelo. É fria, calculista e ambiciosa, usando seus poderes de gelo e neve para dominar e controlar. Sempre busca poder e costuma elaborar os planos do trio.
+                </p>
+            </div>
+        </div>
+    </section>
+    <!-- Fim Icy -->
 
-  <section class="fada">
-    <div class="container">
-      <div class="fada-img-trix">
-        <img src="img/astrix.jpg" alt="As Trix">
-      </div>
-      <div class="fada-trix-text">
-        <h1> As Trix </h1>
-        <p>  Trix são conhecidas por sua determinação, ambição e magia negra poderosa, que muitas vezes se baseia em elementos da natureza e emoções negativas. Elas aparecem frequentemente como as vilãs centrais ou como aliadas de outros antagonistas mais poderosos.
-        </p>
-      </div>
-    </div>
-  </section>
-</div>
-</section>
-  <section class="fada">
-    <div class="container">
-      <div class="fada-img-trix">
-        <img src="img/icy.jpg" alt=" Ice ">
-      </div>
-      <div class="fada-text-icy">
-        <h1> Icy </h1>
-        <p> Líder das Trix e bruxa do gelo. É fria, calculista e ambiciosa, usando seus poderes de gelo e neve para dominar e controlar. Sempre busca poder e costuma elaborar os planos do trio.
-        </p>
-      </div>
-    </div>
-  </section>
-</div>
-</section>
-<!-- end bloom -->
+    <!-- Darcy -->
+    <section class="fada">
+        <div class="container">
+            <div class="fada-img-trix">
+                <img src="img/darcy.jpg" alt="Darcy">
+            </div>
+            <div class="fada-text-darcy">
+                <h1> Darcy </h1>
+                <p>
+                    Darcy é a mais enigmática e inteligente das Trix. Misteriosa e manipuladora, prefere agir com calma e usar a mente em vez da força. Seus poderes estão ligados à escuridão, sombras, hipnose e ilusões, permitindo que ela controle o ambiente e confunda seus inimigos.
+                </p>
+            </div>
+        </div>
+    </section>
+    <!-- Fim Darcy -->
 
- <!-- stella  -->
-  <section class="fada">
-    <div class="container">
-      <div class="fada-img-trix"><img src="img/darcy.jpg" alt="Darcy">
-      </div>
-      <div class="fada-text-darcy">
-        <h1> Darcy </h1>
-        <p>
-          Darcy é a mais enigmática e inteligente das Trix. Misteriosa e manipuladora, prefere agir com calma e usar a mente em vez da força. Seus poderes estão ligados à escuridão, sombras, hipnose e ilusões, permitindo que ela controle o ambiente e confunda seus inimigos.
-        </p>
-      </div>
-    </div>
-  </section>
-  <!-- end stella -->
+    <!-- Storm -->
+    <section class="fada">
+        <div class="container">
+            <div class="fada-img-trix">
+                <img src="img/storm.jpg" alt=" Stormy">
+            </div>
+            <div class="fada-text-stormy">
+                <h1> Stormy </h1>
+                <p>
+                    Stormy é a energia explosiva do grupo. Impulsiva, orgulhosa e competitiva, detesta seguir regras e prefere resolver problemas usando força bruta. Seus poderes envolvem relâmpagos, trovões, ventanias e tempestades elétricas.
+                    É a mais imprevisível das três, sempre preparada para lutar e provar que é a mais forte.
+                </p>
+            </div>
+        </div>
+    </section>
+    <!-- Storm -->
 
-  <!-- flora  -->
-   <section class="fada">
-    <div class="container">
-      <div class="fada-img-trix">
-        <img src="img/storm.jpg" alt=" Stormy">
-      </div>
-      <div class="fada-text-stormy">
-        <h1> Stormy </h1>
-        <p>
-         Stormy é a energia explosiva do grupo. Impulsiva, orgulhosa e competitiva, detesta seguir regras e prefere resolver problemas usando força bruta. Seus poderes envolvem relâmpagos, trovões, ventanias e tempestades elétricas.
-         É a mais imprevisível das três, sempre preparada para lutar e provar que é a mais forte.
-        </p>
-      </div>
-    </div>
-  </section>
-  
-  <!-- end flora -->
-   <!--musica-->
-  <audio id="minhaMusica" loop>
-    <source src="music/winx.mp3" type="audio/mpeg">
-    Seu navegador não suporta o elemento de áudio.
-</audio>
+    <!-- Musica -->
+    <audio id="minhaMusica" loop><!-- "loop" repete automaticamente quando terminar.-->
+      <source src="music/winx.mp3" type="audio/mp3"> <!-- "source" Indica o arquivo de áudio "type" formato do arquivo. -->
+    </audio>
+    <button id="btnMusica"> 🎶 </button> <!--botão clicável na página.-->
+    <!-- Fim Musica -->
 
-<button id="btnMusica"> 🎶 </button>
-   
- <!-- resultados -->
-  <section class="resultados">
-    <!-- container -->
-     <div class="container">
-      <!-- resultados-text-2 -->
-       <div class="resultados-text-2">
-        Com o poder da amizade e da coragem, até o impossível se torna brilho e luz.
-      </div>
-      <!-- end resultados-text -->
-       <div class="resultados-img">
-        <p>
-          <span>  💫  </span>
-        </p>
-        <p>
-          <span>  🫧  </span>
-        </p>
-        <p>
-          <span>  ✨  </span>
-        </p>
-      </div>
-    </div>
+    <!-- Resultados -->
+    <section class="resultados">
+        <div class="container">
+            <div class="resultados-text-2">
+                Com o poder da amizade e da coragem, até o impossível se torna brilho e luz.
+            </div>
+            <div class="resultados-img">
+                <p><span> 💫 </span></p> <!--usado para agrupar e aplicar estilos a uma pequena porção de texto-->
+                <p><span> 🫧 </span></p>
+                <p><span> ✨ </span></p>
+            </div>
+        </div>
+    </section>
+     <!-- Fim Resultados -->
 
-    <!-- end container -->
-     <script>
-    // 1. Obtém os elementos pelo ID
-    const musica = document.getElementById('minhaMusica');
-    const btnMusica = document.getElementById('btnMusica');
+    <script>
+        // os elementos de áudio e botão pelo ID
+        const musica = document.getElementById('minhaMusica');
+        const btnMusica = document.getElementById('btnMusica');
 
-    // 2. Define a função de play/pause
-    function togglePlayPause() {
-        if (musica.paused) {
-            musica.play();
-            btnMusica.textContent = ' 🎶 ';
-        } else {
-            musica.pause();
-            btnMusica.textContent = ' 🎶';
+        // Define a função que alterna entre tocar e pausar a música
+        function togglePlayPause() {
+            if (musica.paused) {
+                musica.play();
+                // Altera o texto do botão para indicar que está tocando
+                btnMusica.textContent = ' 🎶 ';
+            } else {
+                musica.pause();
+                // Altera o texto do botão para indicar que está pausado
+                btnMusica.textContent = ' 🎶';
+            }
         }
-    }
 
-    // 3. Adiciona o evento de clique ao botão
-    btnMusica.addEventListener('click', togglePlayPause);
+        // Adiciona um "ouvinte" de evento de clique ao botão, chamando a função
+        btnMusica.addEventListener('click', togglePlayPause);
+    </script>
+
+    <script>
+    // Seleciona o ícone de clique
+    const menuIcon = document.querySelector(".menu-icon");
+    // Seleciona o menu que será aberto/fechado
+    const menuUl = document.querySelector(".ul"); 
+
+    if (menuIcon && menuUl) {
+        menuIcon.addEventListener("click", () => {
+            // Esta função faz o "toggle" (alternar):
+            // 1. Se tem a classe 'active', ela REMOVE (fecha).
+            // 2. Se não tem a classe 'active', ela ADICIONA (abre).
+            menuUl.classList.toggle("active");
+        });
+    }
 </script>
 </body>
 </html>

@@ -3,127 +3,130 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/index.css">
     <title>O clube das Winx</title>
+    <link rel="stylesheet" href="css/index.css">
 </head>
+
+<!-- Cor de fundo -->
 <body class="background-purple">
+  <!-- Fim Cor de fundo -->
+
+  <!-- Cabeça nav -->
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <a href="inicio.html">Winx</a>
+                </div>
+                
+                <ul class="ul">
+                    <li><a href="inicio.html">Início</a></li>
+                    
+                    <li class="dropdown">
+                        <a href="personagens.html">Personagens ▾</a>
+                        <ul class="submenu">
+                            <li><a href="trix.html">As trix</a></li>
+                            <li><a href="pets.html">Pets</a></li>
+                        </ul>
+                    </li>
+                    
+                    <li>
+                        <a href="poderes.html">Poderes</a>
+                    </li>
+                    
+                    <li class="dropdown">
+                        <a href="historia.html">Historia ▾</a>
+                        <ul class="submenu">
+                            <li><a href="filmes.html">Filmes</a></li>
+                        </ul>
+                    </li>
+                    
+                    <li><a href="galeria.html">Galeria</a></li>
+                </ul>
+                
+                <div class="menu-icon">
+                    <img src="img/menubranco.png" alt="ícone menu"> 	
+                </div>
+            </nav>
+        </div>
+    </header>
+    <!-- Fim Cabeça nav -->
+
+    <!-- Inicio -->
+     <!-- Titulo -->
+    <main>
+        <div class="container">
+            <div class="main-text">
+                <h1>Entre fadas<br>um mundo de magia</h1>
+                <h3>✨🫧Descubra um mundo mágico onde a amizade é<br>o maior poder das fadas🫧💫.</h3>
+                <!-- Fim Titulo-->
+
+                <!-- Botão -->
+                <div class="reserva-container"> 
+                    <a href="personagens.html" class="reserva-container"> 
+                        <button class="btn-gradient">Transformar</button>
+                    </a> 
+                    <img src="img/logo2.png" alt="logo das winx" class="logo-winx">
+                </div>
+            </div>
+            <!-- Fim Botão -->
+            
+            <!-- Imagem das winx -->
+            <div class="main-img">
+                <img src="img/winx444.png" alt="Clube das winx">
+            </div>
+        </div>
+    </main>
+    <!-- Fim Imagem das Winx -->
+
+    <!-- Resultados -->
+    <section class="resultados">
+        <div class="container">
+            <div class="resultados-text">
+                Um toque de brilho, um pouco de coragem e tudo começa a mudar.
+            </div>
+            
+            <div class="resultados-img">
+                <p><span> 💫 </span></p>
+                <p><span> 🫧 </span></p>
+                <p><span> ✨ </span></p>
+            </div>
+        </div>
+    </section>
+    <!-- Fim Resultados -->
     
-<!-- menu -->
-  <header>
-    <div class="container">
-      <nav>
-        <div class="logo">
-          <a href="inicio.html">Winx</a>
-        </div>
-        <ul class="ul">
-          <li><a href="inicio.html">Início</a></li>
-          <!-- Submenu Personagens -->
-          <li class="dropdown">
-            <a href="personagens.html">Personagens ▾</a>
-            <ul class="submenu">
-              <li><a href="trix.html">As trix</a></li>
-              <li><a href="pets.html">Pets</a></li>
-            </ul>
-          </li>
-           <li class="dropdown">
-            <a href="poderes.html">Poderes</a>
-            </li>
-         <li class="dropdown">
-            <a href="historia.html">Historia ▾</a>
-            <ul class="submenu">
-              <li><a href="filmes.html">Filmes</a></li>
-            </ul>
-         </li>
-          <li><a href="galeria.html">Galeria</a></li>
-        </ul>
-        
-      <div class="menu-icon">
+    <!-- Musica -->
+    <audio id="musica" src="music/winx.mp3" loop></audio>
+    <button id="btnMusica">🎶</button>
+    <!-- Fim Musica -->
+    <script>
+        const musica = document.getElementById('musica');
+        const btn = document.getElementById('btnMusica');
 
-        <img src="img/menubranco.png" alt="ícone menu">    
-      </div>
-    </nav>
-      </div>
-        </header>
- <!-- fim  menu -->
+        btn.onclick = () => {
+            if (musica.paused) {
+                musica.play();
+                btn.textContent = "🔊";
+            } else {
+                musica.pause();
+                btn.textContent = "🎶";
+            }
+        };
+    </script>
+    <script>
+    // Seleciona o ícone de clique
+    const menuIcon = document.querySelector(".menu-icon");
+    // Seleciona o menu que será aberto/fechado
+    const menuUl = document.querySelector(".ul"); 
 
- <!-- main -->
-  <main>
-    <!-- container -->
-  <div class="container">
-    <!-- main text -->
-     <div class="main-text">
-      <h1>Entre fadas<br>um mundo de magia</h1>
-      <h3>✨🫧Descubra um mundo mágico onde a amizade é<br>o maior poder das fadas🫧💫.</h3>
-      
-     <div class="reserva-container"> 
-    <a href="personagens.html" class="reserva-container"> 
-    <button class="btn-gradient">Transformar</button>
-</a>
-        
-
-        <img src="img/logo2.png" alt="logo das winx" class="logo-winx">
-     </div>
-  </div>
-  <!-- fim main text -->
-
-   <!-- main img -->
-    <div class="main-img">
-      <img src="img/winx444.png" alt=" Clube das winx">
-    </div>
-    <!-- fim main img -->
-  </div>
-  </main>
-
-
-  <!-- resultados -->
-   <section class="resultados">
-    <!-- container -->
-     <div class="container">
-       <!-- resultados-text -->
-        <div class="resultados-text">
-          Um toque de brilho, um pouco de coragem e tudo começa a mudar.
-        </div>
-        <!-- fim resultados-text -->
-         <div class="resultados-img">
-          <p>
-            <span>  💫  </span>
-          </p>
-          <p>
-            <span>  🫧  </span>
-          </p>
-          <p>
-            <span>  ✨  </span>
-          </p>
-        </div>
-      </div>
-         <!-- fim container -->
-    
-<audio id="musica" src="music/winx.mp3" loop></audio>
-
-<button id="btnMusica">🎶</button>
-
-<script>
-const musica = document.getElementById('musica');
-const btn = document.getElementById('btnMusica');
-
-btn.onclick = () => {
-    if (musica.paused) {
-        musica.play();
-        btn.textContent = "🔊";
-    } else {
-        musica.pause();
-        btn.textContent = "🎶";
+    if (menuIcon && menuUl) {
+        menuIcon.addEventListener("click", () => {
+            // Esta função faz o "toggle" (alternar):
+            // 1. Se tem a classe 'active', ela REMOVE (fecha).
+            // 2. Se não tem a classe 'active', ela ADICIONA (abre).
+            menuUl.classList.toggle("active");
+        });
     }
-};
 </script>
-<script>
-const menuIcon = document.querySelector(".menu-icon");
-const menuUl = document.querySelector("nav .ul");
-
-menuIcon.addEventListener("click", () => {
-    menuUl.classList.toggle("active");
-});
-</script>
-
-  </body>
-  </html>
+</body>
+</html>

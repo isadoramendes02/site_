@@ -1,8 +1,8 @@
+/* Letra para H1*/
 @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
 
 h1 {
-    font-family: "Great Vibes", cursive;
-   
+    font-family: "Great Vibes", cursive;   
 }
 *{
     margin: 0;
@@ -11,30 +11,36 @@ h1 {
     text-decoration: none;
     list-style: none;
 }
+/* Fim Letra para H1*/
 
+/* Letra geral */
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Playwrite+NO:wght@100..400&display=swap');
 
  *{
   font-family: "Dancing Script", cursive;}
+/* Fim Letra geral */
 
 
+/* Algumas cores principais usadas no site  */
 :root {
-  --cor-fundo: linear-gradient(180deg, #f7ccff, #d5a8ff, #c2e9fb);    /*fundo suave */
-  --cor-principal: #d47fff;      /* roxo mágico */
-  --cor-secundaria: #ffb6f9;     /* rosa fada */
-  --cor-destaque: #7fffd4;       /* verde água */
-  --cor-texto: #4a006e;          /* roxo escuro, para contraste */
+  --cor-fundo: linear-gradient(180deg, #f7ccff, #d5a8ff, #c2e9fb);   
+  --cor-principal: #d47fff;      
+  --cor-secundaria: #ffb6f9;   
+  --cor-destaque: #7fffd4;      
+  --cor-texto: #4a006e;         
   --cor-brilho: linear-gradient(135deg, #7b61ff 0%, #d68cff 40%, #8fd6ff 100%);
   --cor-galeria:  linear-gradient(135deg, #d797ff, #ff8ed9, #8abaff);
-}        /* amarelo clarinho, brilho */
+} 
+ /* Fim Algumas cores principais usadas no site  */      
 
-
+ /* backgroud de fundos */
 .background-purple{
     background:var(--cor-fundo);
 }
 .background-galeria{
   background:var(--cor-galeria) ;
 }
+ /* backgroud de fundos */
 
 /* classes reutilizavéis */
 .container{
@@ -53,6 +59,7 @@ header {
   box-shadow: 0 2px 10px rgba(0,0,0,0.2);
 }
 
+/* Botão */
 .btn-gradient{
     padding: 10px 25px;
     color: white;
@@ -62,7 +69,10 @@ header {
     border-radius: 20px;
 
 }
+/* Fim Botão */
+
 /* Classes do site */
+/* Pagina inicio */
 nav{
     display: flex;
     justify-content: space-between;
@@ -85,7 +95,7 @@ nav{
 .ul li a{
     color: white
 }
-/*main */
+
 main .container{
     display:flex;
     align-items: center;
@@ -96,39 +106,6 @@ main .container{
 .main-text{
    width: 50%; 
    color:white;
-}
-
-/*historia*/
-
-
-.pagina-winx {
-  min-height: 100vh;  /* ocupa 100% da altura da tela */
-  background-image: url("../img/alfeacc.jpg");  /* ajuste o caminho */
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  box-sizing: border-box;
-  
-}
-
-.text-container {
-  display: flex;
-  gap: 20px; /* espaço entre os blocos */
-}
-
-.main-text-2, 
-.main-text-3 {
-  width: 50%;
-  color: white;
-  padding: 20px; /* adiciona espaço interno */
-  box-sizing: border-box; /* importante para não quebrar a largura */
-  margin-top: 100px;  /* aumenta espaço em cima do bloco de texto */
-  margin-bottom: 100px; /* aumenta espaço embaixo */
-}
-
-.main-text h1{
-  font-size: 4.5rem;  
 }
 
 .main-text div{
@@ -157,7 +134,40 @@ main .container{
   width: 80px;   /* diminui o tamanho da imagem */
   height: auto;   /* mantém as proporções corretas */
 }
-/* ===== MENU MOBILE ===== */
+/* Fim pagina inicio */
+
+
+/*historia*/
+.main-text-2, 
+.main-text-3 {
+  width: 50%;
+  color: white;
+  padding: 20px; /* adiciona espaço interno */
+  box-sizing: border-box; /* importante para não quebrar a largura */
+  margin-top: 100px;  /* aumenta espaço em cima do bloco de texto */
+  margin-bottom: 100px; /* aumenta espaço embaixo */
+}
+
+.pagina-winx {
+  min-height: 100vh;  /* ocupa 100% da altura da tela */
+  background-image: url("../img/alfeacc.jpg");  /* ajuste o caminho */
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  box-sizing: border-box;  
+}
+
+.text-container {
+  display: flex;
+  gap: 20px; /* espaço entre os blocos */
+}
+
+.main-text h1{
+  font-size: 4.5rem;  
+}
+
+/*responsividade*/
 .menu-icon {
     display: none;
     cursor: pointer;
@@ -166,51 +176,40 @@ main .container{
 .menu-icon img {
     width: 35px;
 }
-
-/* Estilos apenas para celular */
+.ul {
+    display: flex; 
+    flex-direction: row; 
+}
 @media (max-width: 768px) {
-
-    /* Ajusta o nav no celular */
     nav {
         display: flex;
         justify-content: space-between;
         align-items: center;
         height: 70px;
+        z-index: 1000;
     }
-    .ul {
-      background: linear-gradient(135deg, #7b61ff 0%, #d68cff 40%, #8fd6ff 100%)!important;
-}
-
-    /* Menu lateral oculto */
- .ul {
-    display: none;
-    position: fixed;
-    top: 70px;
-    right: 0;
-    width: 220px;
-    background: linear-gradient(135deg, #ffb7ff, #d7a9ff, #a8d8ff);
-    padding: 20px 25px;   /* ↓↓↓ DIMINUÍMOS ISSO, estava enorme */
-    border-radius: 20px 0 0 20px; /* mais redondinho */
-    flex-direction: column;
-    gap: 18px;
-    z-index: 999;
-    box-shadow: -2px 4px 12px rgba(0,0,0,0.2);
-}
-    /* Quando clicar aparece */
-    .ul.active {
-        display: flex;
-    }
-
-    /* Mostrar ícone de menu no celular */
     .menu-icon {
         display: block;
     }
-
-    /* Esconde a nav normal */
-    nav ul {
-        display: none;
+    .ul {
+        display: none !important; 
+        position: fixed;
+        top: 70px;
+        right: 0;
+        width: 220px;
+        z-index: 999;
+        flex-direction: column;
+        gap: 18px;
+        padding: 20px 25px; 
+        border-radius: 20px 0 0 20px;
+        box-shadow: -2px 4px 12px rgba(0,0,0,0.2);
+        background: linear-gradient(135deg, #7b61ff 0%, #d68cff 40%, #8fd6ff 100%)
+    }
+    .ul.active {
+        display: flex !important;
     }
 }
+/*Fim responsividade */
 
 
 /* resultados */
@@ -233,29 +232,24 @@ main .container{
     align-items: center;
     justify-content: center; 
 }
-
-/* resultados */
 .resultados .resultados-text-2{
     color: white;
     font-size: 1.6rem;
     font-weight: 600;
     width: 50%;
 }
-
 .resultados .resultados-img p {
     font-size: 30px;
       letter-spacing: 8px;
 }
-/*section diferencias*/
+/* Resultados */
 
-/* CONTAINER PRINCIPAL E LAYOUT FLEX */
+/* estrutura de poderes */
 .diferencias .container {
     display: flex;
     justify-content: space-between;
     margin: 30px auto;
 }
-
-/* CARDS DE DIFERENÇAS (Estilo Base e Transição) */
 .diferencias .card {
     width: 30%;
     cursor: pointer;
@@ -264,16 +258,12 @@ main .container{
     color: white;
     background-image: linear-gradient(90deg, #fcb1ff, #d7a9ff, #a8d8ff);}
 
-/* EFEITO AO PASSAR O MOUSE (HOVER) */
 .diferencias .card:hover {
-    /* Aplica o Zoom (Aumenta em 5%) */
-    transform: scale(1.05);
     
-    /* Adiciona uma Sombra para sensação de "levantar" */
+    transform: scale(1.05);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
 }
 
-/* ELEMENTOS INTERNOS DO CARD */
 .diferencias .card img {
     width: 100px;
     height: 80px;
@@ -283,8 +273,9 @@ main .container{
     margin: 13px 0;
     font-weight: 600;
 }
+/* fim estrutura poderes */
 
-/* CORES ESPECÍFICAS DOS CARDS (GRADIENTES) */
+/* cores  pagina poderes  */
 .diferencias .card.bloom {
     background: linear-gradient(135deg, #38C6D9, #7FE8F0, #FF8C42);
 }
@@ -308,79 +299,17 @@ main .container{
 .diferencias .card.aisha{
     background: linear-gradient(135deg, #01579B 0%, #00B8D4 50%, #80D8FF 100%);
 }
+/* fim cores pagina poderes */
 
-/*section diferencias*/
-
-/*section fada bloom*/
-
-
+/* organização personagens dos blocos e entre as imagens */
+/* reutilizavel */
 .fada .container{
   margin-bottom: -90px;
   padding-bottom: 60px;
   display: flex;
   align-items: center;
-
 }
-
-
-/*As trix*/
-
-.fada .fada-img{
-  width: 20%;
-  height: 20%;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  flex-wrap: wrap;
-  gap: 40px;
-  padding: 30px;
-}
-
-.fada .fada-img{
-  width: 20%;
-  height: 20%;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  flex-wrap: wrap;
-  gap: 40px;
-  padding: 30px;
-}
-.fada .fada-img img{
-  width:100%;
-  border-radius: 10px;
-}
-
-
-
-
-.fada .fada-img-trix {
-  width: 20%;
-}
-.fada .fada-img-trix img{
-  width:75%;
-  border-radius: 30px;
-}
-.fada-img-trix  {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  flex-wrap: wrap;
-  gap: 40px;
-  padding: 20px;
-}
-
-.fada-img-trix img {
-  width: 250px; /* tamanho reduzido */
-  border-radius: 20px;
-  transition: transform 0.3s, box-shadow 0.3s;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-}
-.fada-img-trix img:hover {
-  transform: scale(1.08);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-}
-
+/* Fim organização personagens dos blocos e entre as imagens */
 
 /*pet*/
 
@@ -413,7 +342,7 @@ main .container{
 }
 /*end pet*/
 
-
+/* Pagina Personagens */
 .fada .fada-text{
   padding: 30px;
   width: 50%;
@@ -472,7 +401,64 @@ main .container{
   min-height: 180px;
 }
 /* end aisha*/
-/*As trix */
+/* Fim pagina Personagens */
+
+
+/*As trix imagem */
+.fada .fada-img{
+  width: 20%;
+  height: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 40px;
+  padding: 30px;
+}
+
+.fada .fada-img{
+  width: 20%;
+  height: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 40px;
+  padding: 30px;
+}
+.fada .fada-img img{
+  width:100%;
+  border-radius: 10px;
+}
+.fada .fada-img-trix {
+  width: 20%;
+}
+.fada .fada-img-trix img{
+  width:75%;
+  border-radius: 30px;
+}
+.fada-img-trix  {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 40px;
+  padding: 20px;
+}
+
+.fada-img-trix img {
+  width: 250px; /* tamanho reduzido */
+  border-radius: 20px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+.fada-img-trix img:hover {
+  transform: scale(1.08);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+/* Fim As Trix imagem */
+
+/*As trix texto */
 .fada .fada-trix-text{
   padding: 30px;
   width: 60%;
@@ -523,14 +509,11 @@ main .container{
 
   color: white;
   min-height: 180px;}
+  /* Fim As trix texto */
 
-
-
-  /* ------------------------------------------- */
-/* TRANSFORMAÇÃO E SOMBREAMENTO PARA BLOCOS DE TEXTO */
-/* ------------------------------------------- */
-
-/* Adiciona transição e sombra de base para todos os blocos de texto das fadas */
+/*movimento e sombra de blocos de texto*/
+/*reutilizavel*/
+/*sombra*/
 .fada .fada-text,
 .fada .fada-stella-text,
 .fada .fada-flora-text,
@@ -540,14 +523,13 @@ main .container{
 .fada .fada-trix-text,
 .fada .fada-text-icy,
 .fada .fada-text-darcy,
-.fada .fada-text-stormy {
-    /* Adiciona a transição para suavizar o movimento de salto e sombra */
+.fada .fada-text-stormy { 
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    /* Sombra base sutil para dar profundidade antes do hover */
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); 
 }
+/*sombra*/
 
-/* Efeito de Salto e Sombra Escura ao passar o mouse */
+/* salto ao passar o mouse */
 .fada .fada-text:hover,
 .fada .fada-stella-text:hover,
 .fada .fada-flora-text:hover,
@@ -558,162 +540,28 @@ main .container{
 .fada .fada-text-icy:hover,
 .fada .fada-text-darcy:hover,
 .fada .fada-text-stormy:hover {
-    /* Faz o bloco saltar ligeiramente para frente */
     transform: scale(1.02); 
-    /* Sombra escura (preto com transparência) para o efeito 'degrade preto' em volta */
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
 }
+/* Fim movimento e degrade de blocos de texto*/
 
 
-/* ------------------------------------------- */
-/* TRANSFORMAÇÃO E SOMBREAMENTO PARA IMAGENS INDIVIDUAIS */
-/* ------------------------------------------- */
-
-/* Estilo da Imagem Individual (Bloom, Stella, etc.) */
+/* Estilo de imagem e sombra */
+/*sombra*/
 .fada .fada-img img {
     width: 100%;
     border-radius: 10px;
-    
-    /* Adiciona a transição e a sombra base */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); 
 }
-
-/* Efeito de Salto e Sombra Escura ao passar o mouse */
+/*efeito ao passar o mouse*/
 .fada .fada-img img:hover {
-    /* Faz a imagem saltar */
     transform: scale(1.08); 
-    /* Sombra escura (preto com transparência) para o efeito 'degrade preto' */
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5); 
 }
+/* Estilo de imagem e sombra */
 
-/* ------------------------------------------- */
-/* IMAGENS DAS TRIX (Ajustes para unificar o hover) */
-/* ------------------------------------------- */
-
-/* Ajuste sutil: apenas para garantir que a sombra do hover das Trix use o mesmo estilo */
-.fada-img-trix img:hover {
-    transform: scale(1.08);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5); 
-}
-/*end As trix */
-
-/*responsivo*/
-@media (max-width: 960px) {
-
-    .menu-ícon{
-        display: block;
-    }
-
-    main .container{
-        flex-direction: column;
-    }
-
-    main .container .main-img,
-    main .container .main-text{
-        width: 100%;
-        text-align: center;
-    }
-
-    main .container .main-text h1{
-        font-size: 4rem;
-    }
-
-    main .container .main-text div{
-        justify-content: center;
-    }
-
-    .resultados .resultados-text,
-    .resultados .resultados-img{
-        width: 100%;
-        text-align: center;
-    }
-
-    .resultados-img{
-        margin-top: 30px;
-    }
-
-    .diferencias .container{
-        flex-direction: column;
-    }
-
-    .diferencias .card{
-        width: 100%; 
-    }
-}
-@media (max-width:440px){
-   .resultados .resultados-img{
-    flex-direction: column;   
-   } 
-   main .container .main-text h1{
-    font-size: 3rem;
-   }
-}
- .imagem-pequena {
-      width: 130px;     /* Largura fixa */
-      height: auto;     /* Mantém a proporção da imagem */
-    }
-
-    header.header-winx {
-  background: linear-gradient(to right, #f48fb1, #81d4fa);
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-  padding: 15px 0;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-}
-
-.container-winx {
-  width: 90%;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.logo-winx a {
-  font-size: 2rem;
-  font-weight: 700;
-  color: white;
-  text-decoration: none;
-  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-}
-
-.ul-winx {
-  list-style: none;
-  display: flex;
-  gap: 25px;
-}
-
-.ul-winx a {
-  text-decoration: none;
-  color: white;
-  font-weight: 500;
-  transition: 0.3s;
-}
-
-.ul-winx a:hover {
-  color: #ffecb3;
-}
-
-.btn-gradient-winx {
-  background: linear-gradient(to right, #ff80ab, #b388ff);
-  color: white;
-  border: none;
-  padding: 8px 16px;
-  border-radius: 20px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-.btn-gradient-winx:hover {
-  transform: scale(1.05);
-}
-
-/* --- GALERIA --- */
-
-
+/* Galeria */
 .galeria-container-winx {
   display: flex;
   justify-content: center;
@@ -721,22 +569,21 @@ main .container{
   flex-wrap: wrap;
   gap: 50px;      
   padding: 30px;  
-} /*tamanho dos espaçamentos entre as caixas*/
-
+}
 .galeria-container-winx img {
-  width: 230px; /* tamanho reduzido */
+  width: 230px; 
    height: 230px;  
   border-radius: 20px;
   transition: transform 0.3s, box-shadow 0.3s;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
-
 .galeria-container-winx img:hover {
   transform: scale(1.08);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
 }
+/*Fim Galeria */
 
-/* Lista principal */
+/* Lista principal da nav  */
 .ul {
   list-style: none;
   display: flex;
@@ -756,8 +603,9 @@ main .container{
   padding: 10px 15px;
   display: block;
 }
+/* Fim Lista principal da nav */
 
-/* Submenu (oculto por padrão) */
+/* Submenu da nav principal */
 .submenu {
   display: none;
   position: absolute;
@@ -780,21 +628,19 @@ main .container{
 
 .submenu li a:hover {
   background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
 }
 
-/* Mostrar submenu no hover (desktop) */
 .dropdown:hover .submenu {
   display: block;
 }
 
-/* Ícone do menu (para mobile) */
 .menu-ícon img {
   width: 30px;
   cursor: pointer;
   display: none;
 }
 
-/* Menu ativo no mobile */
 .ul.ativo {
   display: block;
   flex-direction: column;
@@ -806,95 +652,11 @@ main .container{
   text-align: center;
   padding: 10px 0;
 }
-
-/* Submenu aberto no mobile */
-.dropdown.open .submenu {
-  display: block;
-}
-
-/* Responsivo */
-/* ======================== */
-/*  RESPONSIVIDADE GERAL    */
-/* ======================== */
-
-/* Celulares */
-@media (max-width: 768px) {
-
-    /* Ajuste de container */
-    .container {
-        width: 100%;
-        padding: 0 20px;
-        flex-direction: column;
-    }
-
-    /* Menu responsivo */
-    nav .ul {
-        display: none; /* escondido inicialmente */
-        flex-direction: column;
-        background: #fff;
-        width: 100%;
-        padding: 20px;
-    }
-
-    .menu-ícon {
-        display: block;
-        cursor: pointer;
-    }
-
-    nav .ul.active {
-        display: flex;
-    }
-
-    /* Textos */
-    h1 {
-        font-size: 30px;
-        text-align: center;
-    }
-
-    h3 {
-        font-size: 18px;
-        text-align: center;
-    }
-
-    /* Imagens */
-    img {
-        max-width: 100%;
-        height: auto;
-    }
-
-    /* Layout lado a lado vira empilhado */
-    .main-text, 
-    .main-img {
-        width: 100%;
-        text-align: center;
-    }
-
-    /* Botões */
-    .btn-gradient {
-        width: 100%;
-        font-size: 20px;
-    }
-
-}
+/* Fim Lista principal da nav  */
 
 
 
-/* Conteúdo principal */
-.intro {
-  text-align: center;
-  padding: 80px 20px;
-}
-
-.intro h1 {
-  font-size: 2.5em;
-  margin-bottom: 20px;
-}
-
-.intro p {
-  font-size: 1.2em;
-}
-
-/* CONTAINER DOS VÍDEOS */
+/* container pagina de filmes */
 .trailer-card {
     display: flex;
     flex-wrap: wrap;
@@ -903,8 +665,9 @@ main .container{
     padding: 20px;
     margin-bottom: 50px;
 }
+/* fim container pagina de filmes */
 
-/* CARD DO VÍDEO */
+/* estilo pagina filmes*/
 .video-card {
     background-image: linear-gradient(90deg, #fcb1ff, #d7a9ff, #a8d8ff);
     border-radius: 15px;
@@ -913,11 +676,9 @@ main .container{
     margin-top: 20px;
     text-align: center;
 }
+/* fim estilo pagina filmes */
 
-/* ESTILO DO VÍDEO */
-
-
-/* TÍTULO DO VÍDEO */
+/* Titulo pagina filmes */
 .video-card-text {
     margin-top: 10px;
     font-size: 16px;
@@ -938,18 +699,19 @@ main .container{
   margin-top: 80px;
   text-align: center;
 }
+
 .card-text-titulo-1 {
   color: white;
   text-align: center;
   margin-bottom: 10px;
 }
+/* Fim de pagina de filmes */
 
 /*musica*/
 #btnMusica {
-    position: fixed;              /* FICA PARADO NA TELA */
-    bottom: 80px;                 /* ALTURA (aumente para subir) */
-    left: 10px;                   /* DISTÂNCIA DA ESQUERDA (mude para o lado) */
-    
+    position: fixed;              
+    bottom: 80px;                 
+    left: 10px;                      
     background: linear-gradient(90deg, #fcb1ff, #d7a9ff, #a8d8ff);
     color: #333;
     border: 1px solid #ccc;
@@ -957,10 +719,6 @@ main .container{
     cursor: pointer;
     border-radius: 200px;
     font-size: 30px;
-    z-index: 9999;                /* GARANTE QUE FICA POR CIMA */
-   
-}
 
-#btnMusica:hover {
-    background-color: #ddd;
 }
+/* Fim musica */

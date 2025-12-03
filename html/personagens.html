@@ -7,9 +7,11 @@
     <link rel="stylesheet" href="css/index.css">
 </head>
 
+<!-- Cor de fundo -->
 <body class="background-galeria">
+    <!-- Fim de Cor de fundo -->
 
-    <!-- HEADER / MENU -->
+    <!-- Cabeça nav -->
     <header>
         <div class="container">
             <nav>
@@ -46,8 +48,10 @@
             </nav>
         </div>
     </header>
+    <!-- Fim Cabeça nav -->
 
-    <!-- PERSONAGENS -->
+    <!-- Personagens -->
+      <!-- Fada bloom -->
     <section class="fada">
         <div class="container">
             <div class="fada-img">
@@ -55,11 +59,15 @@
             </div>
             <div class="fada-text">
                 <h2>🌸 Bloom — Fada da Chama do Dragão 🔥🐉💫</h2>
-                <p>Fada da Chama do Dragão, líder do grupo. Vem da Terra e descobre que é princesa de Domino.</p>
+                <p>
+                    Líder do grupo e detentora da Chama do Dragão, a magia mais poderosa. Vem da Terra e é a Princesa de Domino. É corajosa e determinada.
+                </p>
             </div>
         </div>
     </section>
+    <!-- Fim fada Bloom -->
 
+    <!-- Fada Stella -->
     <section class="fada">
         <div class="container">
             <div class="fada-img">
@@ -67,11 +75,15 @@
             </div>
             <div class="fada-stella-text">
                 <h2>☀️ Stella — Fada do Sol e da Lua 🌞👑✨</h2>
-                <p>Fada da Luz, adora moda, brilho e diversão. Vem de Solária.</p>
+                <p>
+                    Princesa de Solária e fada do Sol Reluzente. Adora moda e é a mais otimista e espontânea do grupo.
+                </p>
             </div>
         </div>
     </section>
+    <!-- Fim fada Stella -->
 
+    <!-- Fada Flora -->
     <section class="fada">
         <div class="container">
             <div class="fada-img">
@@ -79,11 +91,15 @@
             </div>
             <div class="fada-flora-text">
                 <h2>🌷 Flora — Fada da Natureza 🌿🌸💚</h2>
-                <p>Doce e gentil, ama todas as formas de vida. Vem de Linphea.</p>
+                <p>
+                    Fada da Natureza, vinda de Linphea. É a mais doce e sensível, especializada em manipulação de plantas, cura e defesa.
+                </p>
             </div>
         </div>
     </section>
+    <!-- Fim fada Flora -->
 
+    <!-- Fada Musa -->
     <section class="fada">
         <div class="container">
             <div class="fada-img">
@@ -91,11 +107,15 @@
             </div>
             <div class="fada-musa-text">
                 <h2>🎵 Musa — Fada da Música 🎧🎶💙</h2>
-                <p>Criativa e intensa, expressa seus sentimentos através do som. Vem de Melody.</p>
+                <p>
+                    Fada da Música, de Melody. Controla ondas sonoras e vibrações. Tem uma personalidade intensa e um pouco rebelde, mas é muito leal.
+                </p>
             </div>
         </div>
     </section>
+    <!-- Fim fada Musa -->
 
+    <!-- Fada Tecna -->
     <section class="fada">
         <div class="container">
             <div class="fada-img">
@@ -103,11 +123,15 @@
             </div>
             <div class="fada-tecna-text">
                 <h2>⚡ Tecna — Fada da Tecnologia 💻⚙️🧠</h2>
-                <p>Lógica e determinada, ama resolver problemas. Vem de Zenith.</p>
+                <p>
+                    Fada da Tecnologia, de Zenith. É a mais racional e lógica, usando energia digital para criar barreiras e interagir com máquinas.
+                </p>
             </div>
         </div>
     </section>
+    <!-- Fim fada Tecna -->
 
+    <!-- Fada Aisha -->
     <section class="fada">
         <div class="container">
             <div class="fada-img">
@@ -115,12 +139,15 @@
             </div>
             <div class="fada-aisha-text">
                 <h2>🌊 Aisha — Fada das Ondas 🌊🏄🏽‍♀️💪</h2>
-                <p>Valente e aventureira. Vem de Andros e controla a água.</p>
+                <p>
+                    Fada dos Fluidos e Princesa de Andros. É a mais atlética e aventureira, controlando a água e o Morphix (líquido maleável).
+                </p>
             </div>
         </div>
     </section>
+    <!-- Fim Fada Aisha -->
 
-    <!-- RESULTADOS -->
+    <!-- Resultados -->
     <section class="resultados">
         <div class="container">
             <div class="resultados-text-2">
@@ -134,15 +161,18 @@
             </div>
         </div>
     </section>
+    <!-- Fim resultados -->
 
-    <!-- MÚSICA -->
+    <!-- Musica -->
     <audio id="musica" src="music/winx.mp3" loop></audio>
     <button id="btnMusica">🎶</button>
+    <!-- Fim Musica -->
 
     <script>
         const musica = document.getElementById('musica');
         const btn = document.getElementById('btnMusica');
 
+        // Alterna entre play (🔊) e pause (🎶) ao clicar
         btn.onclick = () => {
             if (musica.paused) {
                 musica.play();
@@ -152,17 +182,15 @@
                 btn.textContent = "🎶";
             }
         };
-    </script>
-
-    <!-- MENU MOBILE -->
-    <script>
         const menuIcon = document.querySelector(".menu-icon");
         const menuUl = document.querySelector("nav .ul");
 
+        // Adiciona ou remove a classe 'active' no menu ao clicar no ícone
         menuIcon.addEventListener("click", () => {
             menuUl.classList.toggle("active");
         });
     </script>
-
+    
+    
 </body>
 </html>
